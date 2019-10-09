@@ -1,5 +1,5 @@
 window.onload = function() {
-    var picturePath="https://images.gitee.com/uploads/images/2019/0927/141750_60a30dc9_5016576.jpeg";//图片路径
+    var picturePath="../src/fun3.jpg";//图片路径
     var multNum = 10;//显示放大图片倍数
     /**
      * 根据底数 计算指数
