@@ -1,5 +1,5 @@
 window.onload = function() {
-    var picturePath="../src/img/fun1.jpg";//图片路径
+    var picturePath="../picture/src/img/fun1.jpg";//图片路径
     var multNum = 10;//显示放大图片倍数
     /**
      * 根据底数 计算指数
