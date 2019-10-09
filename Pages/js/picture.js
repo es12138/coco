@@ -1,6 +1,6 @@
 window.onload = function() {
     var picturePath="../picture/src/img/fun1.jpg";//图片路径
-    var multNum = 10;//显示放大图片倍数
+    var multNum = 2;//显示放大图片倍数
     /**
      * 根据底数 计算指数
      * @param base 底数
@@ -81,6 +81,7 @@ window.onload = function() {
             var h = !1;
             n.delegate("div", "mouseenter",
                 function(e) {
+					console.log("mouseenter");
                     if (h) return ! 1;
                     h = !0;
                     var t = W(this),
@@ -100,7 +101,11 @@ window.onload = function() {
                         })
                 }).delegate("div", "mouseleave",
                 function(e) {
+					console.log("mouseleave");
                     h = !1
+                }).delegate("div", "mousemove",
+                function(e) {
+					console.log("mousemove");
                 }).css({
                 width: showSize+"px",
                 height: showSize+"px",
