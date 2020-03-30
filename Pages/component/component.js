@@ -12,7 +12,7 @@ var component = new Component();
 component.Init();
 
 function Component(){
-    this._guid = this.GetGuid();
+    this._guid = "";
     this._id = "component-"+this._guid;
     this._fatherDom = $("#"+this._id);
 
