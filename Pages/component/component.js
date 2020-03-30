@@ -12,12 +12,15 @@ var component = new Component();
 component.Init();
 
 function Component(){
-    this._guid = "";
+    this._guid = this.GetGuid();
     this._id = "component-"+this._guid;
     this._fatherDom = $("#"+this._id);
 
     this.Init = function(){
         this._guid = this.GetGuid();
+        this._id = "component-"+this._guid;
+        this._fatherDom = $("#"+this._id);
+        
         this.AddDom($("body:first"));
 
         $('#show-12138').click(this.Show);
@@ -25,11 +28,12 @@ function Component(){
     }.bind(this);
 
     this.AddDom = function(fatherDom){
-        fatherDom.append(this.CreateFatherDom(this._id));
-        fatherDom.append(this.CreateOutLineDom(this._id));
+        let id = this._id;
+        fatherDom.append(this.CreateFatherDom(id));
+        fatherDom.append(this.CreateOutLineDom(id));
         
         this._fatherDom = $("#"+this._id);
-    };
+    }.bind(this);
 
     this.CreateFatherDom = function(guid){
         let dom = '<div style="display:none" class="'+COMPONENT_CLASS+'" id="'+guid+'"></div>';
@@ -41,7 +45,7 @@ function Component(){
         // dom += "<button id='show-"+guid+"' onclick='alert(1);'>alert 1</button>";
         // dom += "<button id='hide-"+guid+"' onclick='alert(2);'>alert 2</button>";
         dom += "<button id='show-12138'>alert 1</button>";
-        dom += "<button id='hide-'"+guid+">alert 2</button>";
+        dom += "<button id='hide-"+guid+"'>alert 2</button>";
         dom += "</div>";
         return dom;
     };
