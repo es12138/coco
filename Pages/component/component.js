@@ -8,8 +8,11 @@
 // }
 const COMPONENT_ID = "873bfcd88a90c67df2fa13d1b4cf2e9e";
 const COMPONENT_CLASS = "component-873bfcd88a90c67df2fa13d1b4cf2e9e";
-var component = new Component();
-component.Init();
+
+if(typeof(component) == 'undefined'){
+    var component = new Component();
+    component.Init();
+}
 
 function Component(){
     this._guid = "";
