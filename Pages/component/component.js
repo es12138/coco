@@ -19,9 +19,7 @@ function Component(){
         this._fatherDom.append(this.CreateOutLineDom(guid));
 
         $('#show-12138').click(this.Show);
-        $('#hide-12138').click(function(){
-            this.Hide();
-        });
+        $('#hide-12138').click(this.Hide);
     }.bind(this);
 
     this.CreateOutLineDom = function(guid){
