@@ -1,4 +1,13 @@
 function OutLine(){
+
+    this.Init = function(){
+
+    };
+
+    this.AddDom = function(){
+
+    };
+
     this.Show = function(){
         console.log("show out line.");
         [].forEach.call($$('*'), function(a) {
