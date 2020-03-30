@@ -18,8 +18,10 @@ function Component(){
         this._guid = guid;
         this._fatherDom.append(this.CreateOutLineDom(guid));
 
-        $('#show-12138').click(this.Show());
-        $('#hide-12138').click(this.Hide());
+        $('#show-12138').click(this.Show);
+        $('#hide-12138').click(function(){
+            this.Hide();
+        });
     }.bind(this);
 
     this.CreateOutLineDom = function(guid){
