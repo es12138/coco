@@ -28,7 +28,7 @@ function Component(){
         
         this.AddDom($("body:first"));
 
-        $('#show-12138').click(this.Show);
+        $('#show-'+this._id).click(this.Show);
         $('#hide-'+this._id).click(this.Hide);
     }.bind(this);
 
