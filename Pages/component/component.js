@@ -12,13 +12,13 @@ var component = new Component();
 component.Init();
 
 function Component(){
-    this._guid = this.GetGuid();
+    this._guid = "";
     this._id = "component-"+this._guid;
     this._fatherDom = $("#"+this._id);
 
-    this.Init = function(guid){
-        this._guid = guid;
-        this.AddDom();
+    this.Init = function(){
+        this._guid = this.GetGuid();
+        this.AddDom($("body:first"));
 
         $('#show-12138').click(this.Show);
         $('#hide-'+this._id).click(this.Hide);
