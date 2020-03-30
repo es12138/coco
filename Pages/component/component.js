@@ -35,7 +35,7 @@ function Component(){
     this.AddDom = function(fatherDom){
         let id = this._id;
         fatherDom.append(this.CreateFatherDom(id));
-        fatherDom.append(this.CreateOutLineDom(id));
+        this._fatherDom.append(this.CreateOutLineDom(id));
         
         this._fatherDom = $("#"+this._id);
     }.bind(this);
