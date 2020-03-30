@@ -6,13 +6,15 @@
 // function hide(){
 //     outLine.Hide();
 // }
-const COMPONENT_ID = "873bfcd88a90c67df2fa13d1b4cf2e9e";
-const COMPONENT_CLASS = "component-873bfcd88a90c67df2fa13d1b4cf2e9e";
 
 if(typeof(component) == 'undefined'){
+    var COMPONENT_ID = "873bfcd88a90c67df2fa13d1b4cf2e9e";
+    var COMPONENT_CLASS = "component-873bfcd88a90c67df2fa13d1b4cf2e9e";
+    
     var component = new Component();
     component.Init();
 }
+
 
 function Component(){
     this._guid = "";
@@ -38,17 +40,17 @@ function Component(){
         this._fatherDom = $("#"+this._id);
     }.bind(this);
 
-    this.CreateFatherDom = function(guid){
-        let dom = '<div style="display:none" class="'+COMPONENT_CLASS+'" id="'+guid+'"></div>';
+    this.CreateFatherDom = function(id){
+        let dom = '<div style="display:none" class="'+COMPONENT_CLASS+'" id="'+id+'"></div>';
         return dom;
     };
 
-    this.CreateOutLineDom = function(guid){
+    this.CreateOutLineDom = function(id){
         let dom = "<div>";
         // dom += "<button id='show-"+guid+"' onclick='alert(1);'>alert 1</button>";
         // dom += "<button id='hide-"+guid+"' onclick='alert(2);'>alert 2</button>";
-        dom += "<button id='show-12138'>alert 1</button>";
-        dom += "<button id='hide-"+guid+"'>alert 2</button>";
+        dom += "<button id='show-"+id+"'>alert 1</button>";
+        dom += "<button id='hide-"+id+"'>alert 2</button>";
         dom += "</div>";
         return dom;
     };
