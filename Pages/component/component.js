@@ -6,6 +6,7 @@
 // function hide(){
 //     outLine.Hide();
 // }
+console.log("component.js load!");
 
 if(typeof(component) == 'undefined'){
     var COMPONENT_ID = "873bfcd88a90c67df2fa13d1b4cf2e9e";
@@ -13,8 +14,8 @@ if(typeof(component) == 'undefined'){
     
     var component = new Component();
     component.Init();
+    console.log("Component init.");
 }
-
 
 function Component(){
     this._guid = "";
